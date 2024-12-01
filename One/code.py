@@ -4,10 +4,12 @@ content = file.readlines()
 leftList = []
 rightList = []
 
+amountOfLines = len(content)
+
 distance = 0
 similarityScore = 0
 
-for line in range(len(content)):
+for line in range(amountOfLines):
     
     row = content[line].split('   ')
     leftList.insert(line, int(row[0]))
@@ -17,7 +19,7 @@ for line in range(len(content)):
 leftList.sort()
 rightList.sort()
 
-for line in range(len(content)):
+for line in range(amountOfLines):
     distance = distance + abs(leftList[line] - rightList[line])
     similarityScore = similarityScore + (leftList[line] * rightList.count(leftList[line]))     
 
