@@ -10,7 +10,6 @@ distance = 0
 similarityScore = 0
 
 for line in range(amountOfLines):
-    
     row = content[line].split('   ')
     leftList.insert(line, int(row[0]))
     rightList.insert(line, int(row[1].strip()))
