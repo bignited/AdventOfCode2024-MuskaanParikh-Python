@@ -5,19 +5,22 @@ leftList = []
 rightList = []
 
 distance = 0
+similarityScore = 0
 
 for line in range(len(content)):
     
     row = content[line].split('   ')
-    leftList.insert(line, row[0])
-    rightList.insert(line, row[1].strip())
+    leftList.insert(line, int(row[0]))
+    rightList.insert(line, int(row[1].strip()))
 
 
 leftList.sort()
 rightList.sort()
 
 for line in range(len(content)):
-    distance = distance + abs(int(leftList[line]) - int(rightList[line]))     
+    distance = distance + abs(leftList[line] - rightList[line])
+    similarityScore = similarityScore + (leftList[line] * rightList.count(leftList[line]))     
 
-print(distance)
+print("#1.1 Distance: " , distance)
+print("#1.2 Similarity score: " , similarityScore)
 file.close()
