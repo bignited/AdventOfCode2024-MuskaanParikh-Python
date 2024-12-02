@@ -24,10 +24,7 @@ def checkSafeLevel(row):
         if int(row[column]) > int(row[column + 1]):
             isDecreaseCounter = isDecreaseCounter + 1 
         
-    if isIncreaseCounter == amountOfValuesInRow-1 or isDecreaseCounter == amountOfValuesInRow-1:
-        return True
-    else: 
-        return False
+    return isIncreaseCounter == amountOfValuesInRow-1 or isDecreaseCounter == amountOfValuesInRow-1
 
 def checkSafeLevel_problemDampening(row):
     amountOfValuesInRow = len(row)
@@ -47,7 +44,6 @@ for line in range(amountOfLines):
         amountOfSafeReportsPartOne = amountOfSafeReportsPartOne + 1
     if checkSafeLevel_problemDampening(row):
         amountOfSafeReportsPartTwo = amountOfSafeReportsPartTwo + 1
-
 
 print("#2.1 Amount of safe reports: " , amountOfSafeReportsPartOne)
 print("#2.2 Amount of safe reports: " , amountOfSafeReportsPartTwo)

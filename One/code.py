@@ -14,7 +14,6 @@ for line in range(amountOfLines):
     leftList.insert(line, int(row[0]))
     rightList.insert(line, int(row[1].strip()))
 
-
 leftList.sort()
 rightList.sort()
 
