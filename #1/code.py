@@ -1,4 +1,4 @@
-file = open("./One/data.txt", "r")
+file = open("./#1/data.txt", "r")
 content = file.readlines()
 
 leftList = []

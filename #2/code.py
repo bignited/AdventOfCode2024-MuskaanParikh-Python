@@ -1,4 +1,4 @@
-file = open("./Two/data.txt", "r")
+file = open("./#2/data.txt", "r")
 content = file.readlines()
 
 amountOfLines = len(content)
