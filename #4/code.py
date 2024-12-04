@@ -8,36 +8,31 @@ rowLength = len(content[0])-1
 
 horizontalCounter = 0
 
-verticalCounter = 0 
 verticalList = []
 
-diagonalCounter = 0
-diagonalListLR = []
-diagonalListRL = []
+diagonalList = []
 
 XMAS_REGEX = 'XMAS'
 SAMX_REGEX = 'SAMX'
 
-def findPattern(list):
-    total = 0 
-    for i in range(len(list)):
-        total = total + len(re.findall(XMAS_REGEX, list[i], re.M)) + len(re.findall(SAMX_REGEX, list[i], re.M))
-    return total
-
 for x in range(amountOfRows):
+    
+    horizontalCounter = horizontalCounter + len(re.findall(XMAS_REGEX, content[x], re.M)) + len(re.findall(SAMX_REGEX, content[x], re.M))
+    
     for y in range(rowLength):
-        if x+3 < rowLength: 
-            verticalList.append(content[x][y]+content[x+1][y]+content[x+2][y]+content[x+3][y])
         
-        if x+3 < rowLength and y+3 < amountOfRows: 
-            diagonalListLR.append(content[x][y]+content[x+1][y+1]+content[x+2][y+2]+content[x+3][y+3])
-            diagonalListRL.append(content[x][rowLength-y-1]+content[x+1][rowLength-y-2]+content[x+2][rowLength-y-3]+content[x+3][rowLength-y-4])
+        if x+3 < rowLength : 
+            verticalCheck = content[x][y]+content[x+1][y]+content[x+2][y]+content[x+3][y]
+            if verticalCheck == XMAS_REGEX or verticalCheck == SAMX_REGEX: verticalList.append(verticalCheck)
+        
+            if y+3 < amountOfRows: 
+                diagonalLeftCheck = content[x][y]+content[x+1][y+1]+content[x+2][y+2]+content[x+3][y+3]
+                diagonalRightCheck = content[x][rowLength-y-1]+content[x+1][rowLength-y-2]+content[x+2][rowLength-y-3]+content[x+3][rowLength-y-4]
+                
+                if diagonalLeftCheck == XMAS_REGEX or diagonalLeftCheck == SAMX_REGEX: diagonalList.append(diagonalLeftCheck) 
+                if diagonalRightCheck == XMAS_REGEX or diagonalRightCheck == SAMX_REGEX: diagonalList.append(diagonalRightCheck) 
 
-horizontalCounter = horizontalCounter + findPattern(content)
-verticalCounter = verticalCounter + findPattern(verticalList)
-diagonalCounter = diagonalCounter + (findPattern(diagonalListLR) + findPattern(diagonalListRL))
-
-print("#4.1 XMAS word search: ", horizontalCounter + verticalCounter + diagonalCounter)
+print("#4.1 XMAS word search: ", horizontalCounter + len(verticalList) + len(diagonalList))
 
 XmasCounter = 0
 
