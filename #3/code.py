@@ -19,8 +19,6 @@ mulListTwo = re.findall(partTwoRegex, content, re.M)
 mullieTotalTwo = 0
 doMullie = True
 
-print(len(mulListTwo))
-
 for mullie in range(len(mulListTwo)):
 
     if mulListTwo[mullie] == 'do()':
@@ -32,8 +30,6 @@ for mullie in range(len(mulListTwo)):
     if doMullie and mulListTwo[mullie] != 'do()' and mulListTwo[mullie] != 'don\'t()':
         leftValue, rightValue = str(re.findall('\d*,\d*', mulListTwo[mullie], re.M)[0]).split(',')
         mullieTotalTwo = mullieTotalTwo + (int(leftValue) * int(rightValue))
-
-print(len(mulListTwo))
 
 print("#3.1 Mullie total: ", calculateMullie(mulListOne))
 print("#3.2 Mullie total: ", mullieTotalTwo)
