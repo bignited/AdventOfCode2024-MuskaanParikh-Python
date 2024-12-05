@@ -7,11 +7,12 @@ updatesList = []
 rulesList = []
 incorrectUpdatesList= []
 
-for i in range(len(updates.split("\n"))):
-    updatesList.append(updates.split("\n")[i].split(","))
+def dataSplitter(list, seperator, newList):
+    for i in range(len(list.split("\n"))):
+        newList.append(list.split("\n")[i].split(seperator))
 
-for i in range(len(rules.split("\n"))-1):
-    rulesList.append(rules.split("\n")[i].split("|"))
+dataSplitter(rules, "|", rulesList)
+dataSplitter(updates, ",", updatesList)
 
 def checkCorrectOrder(leftValue, rightValue):
     return [leftValue, rightValue] in rulesList 
