@@ -5,7 +5,7 @@ rules, updates = content.split("\n\n")
 
 updatesList = []
 rulesList = []
-midCount = 0
+incorrectUpdatesList= []
 
 for i in range(len(updates.split("\n"))):
     updatesList.append(updates.split("\n")[i].split(","))
@@ -16,16 +16,43 @@ for i in range(len(rules.split("\n"))-1):
 def checkCorrectOrder(leftValue, rightValue):
     return [leftValue, rightValue] in rulesList 
 
-for x in range(len(updatesList)): 
-    correctUpdate = True 
+def checkCorrectRowForCorrectOrder(row):
+    rowValid = True
     
-    for y in range(len(updatesList[x])-1):
-        if checkCorrectOrder(updatesList[x][y], updatesList[x][y+1]) == False:
-            correctUpdate = False
-            break
-    
-    if correctUpdate: 
-        midCount = midCount + int(updatesList[x][int(len(updatesList[x])/2)])
+    for y in range(len(row)-1):
+        if checkCorrectOrder(row[y], row[y+1]) == False:
+            rowValid = False
+    return rowValid        
 
-print("#5.1 Updates middleIndex: ", midCount)
-print("#5.2 Updates middelIndex: ", 0)
+def getMiddleOfRow(row, x): 
+    return int(row[x][int(len(row[x])/2)])
+
+def addMiddleOfCorrectUpdates(list): 
+    total = 0
+    for x in range(len(list)): 
+        if checkCorrectRowForCorrectOrder(list[x]): total = total + getMiddleOfRow(list, x)
+    return total
+
+print("#5.1 Updates middleIndex: ", addMiddleOfCorrectUpdates(updatesList))
+
+def findIncorrectRows(list):
+    for x in range(len(list)):
+        if checkCorrectRowForCorrectOrder(list[x]) == False: incorrectUpdatesList.append(list[x])  
+
+findIncorrectRows(updatesList)
+
+def fixIncorrectRow(row):
+    for y in range(len(row)-1):
+        if checkCorrectOrder(row[y], row[y+1]) == False: 
+            tempLeft = row[y]
+            tempRight = row[y+1]
+        
+            row[y] = tempRight
+            row[y+1] = tempLeft
+    return row
+
+for x in range(len(incorrectUpdatesList)):
+    while checkCorrectRowForCorrectOrder(incorrectUpdatesList[x]) == False: 
+        incorrectUpdatesList[x] = fixIncorrectRow(incorrectUpdatesList[x])
+
+print("#5.2 Updates middelIndex: ", addMiddleOfCorrectUpdates(incorrectUpdatesList))
