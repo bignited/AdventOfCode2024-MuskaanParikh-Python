@@ -1,7 +1,7 @@
 file = open("./#5/data.txt", "r")
-content = file.read()
+CONTENT = file.read()
 
-rules, updates = content.split("\n\n")
+rules, updates = CONTENT.split("\n\n")
 
 updatesList = []
 rulesList = []

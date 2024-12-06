@@ -1,7 +1,7 @@
 file = open("./#2/data.txt", "r")
-content = file.readlines()
+CONTENT = file.readlines()
 
-amountOfLines = len(content)
+amountOfLines = len(CONTENT)
 amountOfSafeReportsPartOne = 0
 amountOfSafeReportsPartTwo = 0
 
@@ -39,7 +39,7 @@ def checkSafeLevel_problemDampening(row):
     return any(results)
 
 for line in range(amountOfLines):
-    row = content[line].split(' ')
+    row = CONTENT[line].split(' ')
     if checkSafeLevel(row): 
         amountOfSafeReportsPartOne = amountOfSafeReportsPartOne + 1
     if checkSafeLevel_problemDampening(row):

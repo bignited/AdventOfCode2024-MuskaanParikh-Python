@@ -1,16 +1,16 @@
 file = open("./#1/data.txt", "r")
-content = file.readlines()
+CONTENT = file.readlines()
 
 leftList = []
 rightList = []
 
-amountOfLines = len(content)
+amountOfLines = len(CONTENT)
 
 distance = 0
 similarityScore = 0
 
 for line in range(amountOfLines):
-    row = content[line].split('   ')
+    row = CONTENT[line].split('   ')
     leftList.insert(line, int(row[0]))
     rightList.insert(line, int(row[1].strip()))
 

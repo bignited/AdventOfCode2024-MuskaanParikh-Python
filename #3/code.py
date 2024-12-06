@@ -1,10 +1,10 @@
 import re 
 
 file = open("./#3/data.txt", "r")
-content = file.read().strip()
+CONTENT = file.read().strip()
 
 partOneRegex = 'mul\(\d{1,3},\d{1,3}\)'
-mulListOne = re.findall(partOneRegex, content, re.M)
+mulListOne = re.findall(partOneRegex, CONTENT, re.M)
 
 def calculateMullie(list):
     total = 0
@@ -15,7 +15,7 @@ def calculateMullie(list):
 
 
 partTwoRegex = 'mul\(\d{1,3},\d{1,3}\)|do\(\)|don\'t\(\)'
-mulListTwo = re.findall(partTwoRegex, content, re.M)
+mulListTwo = re.findall(partTwoRegex, CONTENT, re.M)
 mullieTotalTwo = 0
 doMullie = True
 
