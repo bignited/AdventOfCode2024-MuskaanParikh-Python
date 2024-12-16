@@ -33,11 +33,15 @@ def checkForOTheEnd(currentX, currentY):
         case "W": return currentY == 0
 
 def checkForObstacleAhead(currentX, currentY):
-    match directionTowards:
-        case "N": return labMap[currentX-1][currentY] == OBSTACLE
-        case "E": return labMap[currentX][currentY+1] == OBSTACLE
-        case "S": return labMap[currentX+1][currentY] == OBSTACLE
-        case "W": return labMap[currentX][currentY-1] == OBSTACLE
+    try:
+        match directionTowards:
+            case "N": return labMap[currentX-1][currentY] == OBSTACLE
+            case "E": return labMap[currentX][currentY+1] == OBSTACLE
+            case "S": return labMap[currentX+1][currentY] == OBSTACLE
+            case "W": return labMap[currentX][currentY-1] == OBSTACLE
+    except:
+        return False
+    
 
 def walkStraight(currentX, currentY):
     match directionTowards:
@@ -67,50 +71,43 @@ for i in range(amountOfRows):
 print("#6.1 Guard Patrol steps: ", positionsOnMap)
 
 def resetMap():
+    labMap = []
     for x in range(amountOfRows): 
         row = []
         for y in range(amountOfColumns-1):
             row.append(CONTENT[x][y])    
         labMap.append(row)
+    return labMap
 
-visited = []
-resetMap()
-guard_x, guard_y = findGuard()
-directionTowards = "N"
-
-print(movementsGuard)
-
-for x in range(1, len(movementsGuard)-1):
-    shouldContinue = True
-    # directionTowards, guard_x, guard_y = movementsGuard[x]
-    
-    for y in range(1, x):
-        if (movementsGuard[y][1] == movementsGuard[x + 1][1] and movementsGuard[y][2] == movementsGuard[x + 1][2]):
-            shouldContinue = False 
-            break
-       
-    if shouldContinue == False:
+uniquePositions = []
+ 
+for direction, x, y in movementsGuard[1:]:
+    if [x,y] in uniquePositions:
         continue
-               
-    labMap[movementsGuard[x+1][1]][movementsGuard[x+1][2]] = "#"
-    visited = []
+    else:
+        uniquePositions.append([x,y])
 
+labMap = resetMap()
+guard_x, guard_y = findGuard()
+uniquePositions.remove([guard_x, guard_y])
+ 
+for x in range(1, len(uniquePositions)):
+    visited = []
+    labMap = resetMap()
+    guard_x, guard_y = findGuard()
+    directionTowards = "N"
+ 
+    labMap[uniquePositions[x][0]][uniquePositions[x][1]] = "#"
+ 
     while checkForOTheEnd(guard_x, guard_y) == False:
-        print("guard", directionTowards, guard_x, guard_y)
         if [directionTowards, guard_x, guard_y] in visited:
-            directionTowards, guard_x, guard_y = movementsGuard[x]
             possibleObstaclesOnMap += 1
             break
-        
         else:
+            visited.append([directionTowards, guard_x, guard_y])
             if checkForObstacleAhead(guard_x, guard_y) == False:
                 guard_x, guard_y = walkStraight(guard_x, guard_y)
-                visited.append([directionTowards, guard_x, guard_y])
-                print(visited)
             else:
                 directionTowards = turnRight()
-    resetMap()
-    
-        
     
 print("#6.2 Guard Patrol steps: ", possibleObstaclesOnMap)
