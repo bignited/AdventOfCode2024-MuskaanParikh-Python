@@ -15,12 +15,26 @@
 
 > `Day 6` ⭐⭐ - De grind is nog steeds bezig hahahaha!!! Ik heb de opgave gelezen en is zeker interessant ik weet al ongeveer hoe ik het wil oplosen :D. Heel benieuwd of dat deze gaat werken hihi :D!! Ik merk wel op ik ben slimmer dan vorig jaar! Het is echt zot! Deel 1 secured, ik was de laatste rij niet aan het meetellen voor some reason en ik kreeg ook een index out of bounds logisch ook. LOL :D Soms schiet ik met mijn eigen chaos mijn eigen voet. Ik heb ook een grappig verhaal dat er vandaag is gebeurd! Dus!!!! Het is kinda gekend in mijn huis dat ik suck in versiering zetten. ik ben alleen de kracht in men huis. Ironisch ikr maar jah. I don't know why I have that title. Maar swat dus mijn mama versiert ons boom en ze had wat kerstballen apart gezet zodat ik ook wat in de boom kon hangen. Idk if you can already feel where I'm going with this story. Dus ik ga een bal in mijn boom hangen en mijn mama zegt seg waarom hang je dat daar, dus ik haal dat eraf en zie dat er een ettiket op dien bal hangt. Dus as every idiot would do, ik trek dat eruit waardoor de bal uit dien clasp geraakt en die valt op de grond. Natuurlijk was het ook een bal dat we net hadden gekocht. Ik zei dan tegen mijn ma: Mama ik ga vanaf nu gewoon naast den boom zitten decoreer jij maar! <3 little side tracking of today :3 xoxo gossip girl Nou ik snap de opagve van deel 2 gewoonweg niet :o 
 
-> `Day 7` - Wat een donkere dag in de advent of code reeks. Ik heb dag 6 deel 2 niet gehaald. :(. Ik ga pauze nemen en dag 7 is uit proberen als ik waardig genoeg ben daarvoor. 
+> `Day 7` ⭐ - Wat een donkere dag in de advent of code reeks. Ik heb dag 6 deel 2 niet gehaald. :(. Ik ga pauze nemen en dag 7 is uit proberen als ik waardig genoeg ben daarvoor. 
 
 > `Day 8` - Geen tijd :( Ik heb een geit geaaid!!! :D 
 
-> `Day 9` - Ik heb het uiteindelijk niet opgelost gekregen. Maar ik was er bijna en dan keek Merlijn en naar en he found it! So thankful eeekk :D Ik had dit weekend ook geen tijd dus ik ga vandaag even dag 9 proberen maken. Ik kijk dag 7 en Dag 8 wel later na! :D Dag 6 is het vaagste dag van deze advent calender. Het mag qua vaagheid stoppen. Merlijn is wel heel cool! :D Thankkk youuuuu!! :D Ik ben ondertussen al bezig met dag 9 maar ik zit op iets doms vast! :D 
+> `Day 9` ⭐ - Ik heb het uiteindelijk niet opgelost gekregen. Maar ik was er bijna en dan keek Merlijn en naar en he found it! So thankful eeekk :D Ik had dit weekend ook geen tijd dus ik ga vandaag even dag 9 proberen maken. Ik kijk dag 7 en Dag 8 wel later na! :D Dag 6 is het vaagste dag van deze advent calender. Het mag qua vaagheid stoppen. Merlijn is wel heel cool! :D Thankkk youuuuu!! :D Ik ben ondertussen al bezig met dag 9 maar ik zit op iets doms vast! :D 
 
 > `Day 10` - De dagen gaan te snel voorbij maar de advent of code gaat ook te snel ik kan niet volgen AAAAAAAAAAAAAAAAAAAH!! :o  
 
-> `Day 16` - I can explain, ik was niet zoveel thuis en jah had ook weinig zin om iets nuttig te doen en mijn vrienden waren online voor league sooooooooooo. Yeah Ik ga het is nu bekijken voor dag 7 komt goed!!! Ik had besproken met men boys dat we een inhaal beweging gingen doen wanneer mijn vakantie begint! :D 
+> `Day 11` - Oops
+
+> `Day 12` - Oops
+
+> `Day 13` - Oops
+
+> `Day 14` - Oops
+
+> `Day 15` - Oops
+
+> `Day 16` - I can explain, ik was niet zoveel thuis en jah had ook weinig zin om iets nuttig te doen en mijn vrienden waren online voor league sooooooooooo. Yeah Ik ga het is nu bekijken voor dag 7 komt goed!!! Ik had besproken met men boys dat we een inhaal beweging gingen doen wanneer mijn vakantie begint! :D Ik word dus altijd gescammed door de test input!! Echt super stom :// 
+
+> `Day 17` - Ik zen nog levend en ik heb een geit knuffeltje gekregen van Merlijn, ik noem de geit Herman!! :D 
+
+> `Day 18` - Dag 7 deel 1 is in the baggggg na hulp van Dorien want ik kan niets zelf hihih :D Dankje Dorieeeen!! <3 Ok nu naar huis :D
